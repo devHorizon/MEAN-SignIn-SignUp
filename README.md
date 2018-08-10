@@ -1,5 +1,5 @@
 # MEAN-SignIn-SignUp
-
+This is a Sign-In/ Sign-Up Module build on Angular 6, Node, Express and MongoDB.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Running the Project
@@ -16,6 +16,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   <code>ng serve</code>
   <br>Navigate to 
     <code>http://localhost:4200/</code></li>
+  </ul>
 
 ## Node Server
 
