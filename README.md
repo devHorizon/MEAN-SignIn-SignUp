@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Running the Project
 <ul>
+  <li>Make sure that your PC has Node and MongoDB installed in it.</li>
  <li>Clone the git repository by running<br>
    <code>git clone https://github.com/prachi231119/MEAN-SignIn-SignUp.git</code>
  </li>
