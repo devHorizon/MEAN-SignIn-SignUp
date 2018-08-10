@@ -1,0 +1,21 @@
+<div *ngIf="spinner">
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
+</div>
+<h1 mat-dialog-title *ngIf="showErr" class="err">The Password you entered was wrong.</h1>
+<h1 mat-dialog-title *ngIf="!showErr" class="success">You are logged in Successfully.</h1>
+<div *ngIf="!showErr">
+    <mat-card>
+        <div *ngIf="!imgErr">
+            <img mat-card-image src={{u.image}} alt="Photo">
+        </div>
+        <mat-card-content>
+            <h3>Name: {{u.name}}</h3>
+            <h3>Email: {{u._id}}</h3>
+            <h3>Password: {{u.password}}</h3>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close] cdkFocusInitial>Exit</button>
+</div>

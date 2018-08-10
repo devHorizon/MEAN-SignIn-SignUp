@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div>
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title class="login-cardtitle">
+          <h2>Sign In</h2>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="login-cardcontent">
+        <form novalidate [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <p>
+            <mat-form-field class="full" color="{{(formErrors.email) ? 'warn' : 'primary'}}">
+              <input matInput formControlName="email" placeholder="Email" type="email" email required>
+              <mat-hint>
+                <span [hidden]="!(formErrors.email)">
+                  {{formErrors.email}}</span>
+              </mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="full" color="{{(formErrors.password) ? 'warn' : 'primary'}}">
+              <input matInput formControlName="password" placeholder="Password" type="text" required>
+              <mat-hint>
+                <span [hidden]="!(formErrors.password)">
+                  {{formErrors.password}}</span>
+              </mat-hint>
+            </mat-form-field>
+          </p>
+          <button type="submit" mat-flat-button color="primary" class="center" [disabled]="userForm.invalid">Submit</button>
+        </form>
+        <br>
+        <button class="social loginBtn loginBtn--facebook" mat-flat-button (click)="socialSignIn('facebook')">Facebook</button>
+
+        <button class="social loginBtn loginBtn--google" mat-flat-button (click)="socialSignIn('google')">Google</button>
+        <div *ngIf="showErr">
+          <h3>You must Register first!</h3>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
